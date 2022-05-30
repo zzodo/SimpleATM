@@ -12,6 +12,7 @@ namespace SimpleATM {
         explicit Account(std::string bank, std::string name, std::string number, int balance = 0) :
             bank_(bank), name_(name), number_(std::stoll(number)), balance_(balance) {};
 
+        std::string GetAccountName() const;
         std::string GetAccountNumber() const;
         std::string GetAccountBank() const;
         int GetBalance();

@@ -1,6 +1,14 @@
 #include "card.h"
 
 namespace SimpleATM {
+    std::string Card::GetCardBank() const {
+        return bank_;
+    }
+
+    std::string Card::GetCardName() const {
+        return name_;
+    }
+
     uint64_t Card::GetCardNumber() const {
         return number_;
     }

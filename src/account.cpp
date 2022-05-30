@@ -1,6 +1,10 @@
 #include "account.h"
 
 namespace SimpleATM {
+    std::string Account::GetAccountName() const {
+        return name_;
+    }
+
     std::string Account::GetAccountNumber() const {
         return std::to_string(number_);
     }

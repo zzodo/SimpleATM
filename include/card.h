@@ -14,7 +14,10 @@ namespace SimpleATM {
         explicit Card(std::string bank, std::string number, std::string name, int exp_date) :
             bank_(bank), number_(std::stoll(number)), name_(name), exp_date_(exp_date) {};
 
+        std::string GetCardBank() const;
+        std::string GetCardName() const;
         uint64_t GetCardNumber() const;
+
         bool operator==(const Card& other) const;
         struct HashFunction {
             size_t operator()(const std::shared_ptr<Card> card) const{
