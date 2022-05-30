@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.12.0)
 project(SimpleATM)
 
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_BUILD_TYPE Debug)
+set(CMAKE_BUILD_TYPE Release)
 set(CMAKE_CXX_FLAGS "-Wall")
 set(CMAKE_CXX_FLAGS_DEBUG "-O0 -g")
 set(CMAKE_CXX_FLAGS_RELEASE "-O2")
@@ -22,5 +22,5 @@ add_library(${PROJECT_NAME} SHARED
         include/card.h
 )
 
-add_executable(${PROJECT_NAME}_example main.cpp)
+add_executable(${PROJECT_NAME}_example example.cpp)
 target_link_libraries(${PROJECT_NAME}_example ${PROJECT_NAME})
